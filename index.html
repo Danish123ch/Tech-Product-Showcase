@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techea</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img class="icon" src="logo.png" alt="logo" width="60px" height="46px" />
+                <p id="webname">Techea</p>
+            </div>
+            <!-- Global Search Bar -->
+        <div class="nav-search">
+            <input type="text" id="globalSearchInput" placeholder="Search products..." onkeyup="handleGlobalSearch(event)">
+            <button class="search-btn" onclick="performGlobalSearch()"></button>
+            <div class="search-dropdown" id="searchDropdown"></div>
+        </div>
+            <div class="navlinks">
+                <div class="navlink">
+                    <a href="products.html">Catalog</a>
+                </div>
+                <div class="navlink">
+                    <a href="feedbackpage.html">Feedback</a>
+                </div>
+                <div class="navlink">
+                    <a href="aboutus.html">About Us</a>
+                </div>
+                <div class="navlink">
+                    <a href="blog.html">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="info" class="hero-section">
+    <div class="hero-background">
+        <div class="hero-slide active" style="background-image: url('https://cdn.thewirecutter.com/wp-content/media/2024/07/laptopstopicpage-2048px-3685-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp')"></div>
+        <div class="hero-slide" style="background-image: url('https://i.ytimg.com/vi/UnIMbI8VTOU/maxresdefault.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('https://cdn.thewirecutter.com/wp-content/media/2025/12/BEST-MIRRORLESS-CAMERAS-GROUP-2X1-2048PX-102-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="moto">
+        <h1 class="mainmoto">Dream. Create. Innovate.</h1>
+        <p id="motoinfo">Where cutting-edge technology meets exceptional service to transform your digital experience</p>
+        
+    </div>
+    <div class="slider-controls">
+        <button class="slider-dot active" onclick="goToSlide(0)"></button>
+        <button class="slider-dot" onclick="goToSlide(1)"></button>
+        <button class="slider-dot" onclick="goToSlide(2)"></button>
+    </div>
+</section>
+    <section id="products">
+        <div id="headcontainer">
+            <h1 id="prodhead">Our Featured Products</h1>
+        </div>
+
+        <!-- Category Sections with Horizontal Scroll -->
+        <section id="category-sections">
+            <!-- Laptops Section -->
+            <div id="laptopSection" class="category-section">
+                <div class="category-section-header">
+                    <h2 class="category-section-title">Laptops</h2>
+                    <button class="view-all-btn" onclick="navigateToCategory('laptop')">View All →</button>
+                </div>
+                <div class="horizontal-scroll-container">
+                    <div class="horizontal-scroll" id="laptopScroll"></div>
+                </div>
+            </div>
+
+            <!-- Audio Section -->
+            <div id="audioSection" class="category-section">
+                <div class="category-section-header">
+                    <h2 class="category-section-title">Audio Devices</h2>
+                    <button class="view-all-btn" onclick="navigateToCategory('audio')">View All →</button>
+                </div>
+                <div class="horizontal-scroll-container">
+                    <div class="horizontal-scroll" id="audioScroll"></div>
+                </div>
+            </div>
+
+            <!-- Cameras Section -->
+            <div id="cameraSection" class="category-section">
+                <div class="category-section-header">
+                    <h2 class="category-section-title">Cameras</h2>
+                    <button class="view-all-btn" onclick="navigateToCategory('camera')">View All →</button>
+                </div>
+                <div class="horizontal-scroll-container">
+                    <div class="horizontal-scroll" id="cameraScroll"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Compact Contact Section -->
+<section id="contactus" class="contact-compact">
+    <div class="contact-compact-container">
+        <div class="contact-compact-left">
+            <div class="contact-compact-badge">📬 Get in touch</div>
+            <h2 class="contact-compact-title">Let's Talk</h2>
+            <p class="contact-compact-desc">Have questions? We'd love to hear from you. Fill the form and we'll respond within 24 hours.</p>
+            
+            <div class="contact-compact-info">
+                <div class="compact-info-item">
+                    <span class="compact-info-icon">📧</span>
+                    <span>info@techea.com</span>
+                </div>
+                <div class="compact-info-item">
+                    <span class="compact-info-icon">📞</span>
+                    <span>+1 (234) 567-890</span>
+                </div>
+                <div class="compact-info-item">
+                    <span class="compact-info-icon">📍</span>
+                    <span>123 Tech Street, Digital City</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-compact-right">
+            <form id="compactContactForm" onsubmit="submitCompactForm(event)">
+                <div class="compact-input-group">
+                    <input type="text" id="compactName" required>
+                    <label>Your Name</label>
+                    <span class="compact-border"></span>
+                </div>
+                
+                <div class="compact-input-group">
+                    <input type="email" id="compactEmail" required>
+                    <label>Email Address</label>
+                    <span class="compact-border"></span>
+                </div>
+                
+                <div class="compact-input-group">
+                    <textarea id="compactMessage" rows="3" required></textarea>
+                    <label>Your Message</label>
+                    <span class="compact-border"></span>
+                </div>
+                
+                <button type="submit" class="compact-submit-btn">
+                    Send Message
+                    <span class="compact-btn-icon">→</span>
+                </button>
+            </form>
+            
+            <!-- Success Message (hidden initially) -->
+            <div class="compact-success" id="compactSuccess" style="display: none;">
+                <div class="compact-success-icon">✓</div>
+                <p>Message sent! We'll get back to you soon.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="footermain">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img class="footer-icon" src="logo.png" alt="logo" width="60" height="46px" />
+                        <h3>Techea</h3>
+                    </div>
+                    <p class="footer-description">Showcasing the best in technology - laptops, audio equipment, and
+                        cameras. Your go-to platform for exploring cutting-edge tech products.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📸</a>
+                        <a href="#" class="social-icon">💼</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="feedbackpage.html">Feedback</a></li>
+                    </ul>
+                </div>
+
+                <!-- Product Categories -->
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#laptopSection">Laptops</a></li>
+                        <li><a href="#audioSection">Audio</a></li>
+                        <li><a href="#cameraSection">Cameras</a></li>
+                        <li><a href="#products">All Products</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us Section -->
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            <span>123 Tech Street, Digital City, DC 12345</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📧</span>
+                            <a href="mailto:info@techea.com">info@techea.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon">🕒</span>
+                            <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Techea. All rights reserved. | Showcasing technology for informational purposes only</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+<script src="work.js"></script>
+<script src="category.js"></script>
+
+</html>

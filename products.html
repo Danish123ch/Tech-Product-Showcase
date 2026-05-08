@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - Techea</title>
+    <link rel="stylesheet" href="style1.css"/>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img class="icon" src="logo.png" alt="logo" width="60px" height="46px" />
+                <p id="webname">Techea</p>
+            </div>
+             <!-- Global Search Bar -->
+        <div class="nav-search">
+            <input type="text" id="globalSearchInput" placeholder="Search products..." onkeyup="handleGlobalSearch(event)">
+            <button class="search-btn" onclick="performGlobalSearch()"></button>
+            <div class="search-dropdown" id="searchDropdown"></div>
+        </div>
+            <div class="navlinks">
+                <div class="navlink">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navlink">
+                    <a href="feedbackpage.html">Feedback</a>
+                </div>
+                <div class="navlink">
+                    <a href="aboutus.html">About Us</a>
+                </div>
+                <div class="navlink">
+                    <a href="blog.html">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Catalog Header -->
+    <div class="catalog-header">
+        <h1>Product Catalog</h1>
+        <p>Browse our collection of premium tech products</p>
+    </div>
+
+    <!-- Category Cards -->
+    <div class="category-cards">
+        <div class="cat-card" onclick="navigateToCategory('laptop')">
+            <div class="cat-icon">💻</div>
+            <h3>Laptops</h3>
+            <p>Powerful laptops for every need</p>
+            <span class="cat-count" id="laptopCount">0</span>
+        </div>
+        <div class="cat-card" onclick="navigateToCategory('audio')">
+            <div class="cat-icon">🎧</div>
+            <h3>Audio</h3>
+            <p>Premium sound experience</p>
+            <span class="cat-count" id="audioCount">0</span>
+        </div>
+        <div class="cat-card" onclick="navigateToCategory('camera')">
+            <div class="cat-icon">📷</div>
+            <h3>Cameras</h3>
+            <p>Capture your moments</p>
+            <span class="cat-count" id="cameraCount">0</span>
+        </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="catalog-filters">
+        <button class="catalog-filter-btn active" onclick="filterCatalog('all')">All Products</button>
+        <button class="catalog-filter-btn" onclick="filterCatalog('laptop')">💻 Laptops</button>
+        <button class="catalog-filter-btn" onclick="filterCatalog('audio')">🎧 Audio</button>
+        <button class="catalog-filter-btn" onclick="filterCatalog('camera')">📷 Cameras</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="catalog-grid" id="catalogGrid"></div>
+
+    <!-- Load More -->
+    <div class="catalog-load-more" id="loadMoreContainer">
+        <button class="load-more-catalog" onclick="loadMoreCatalog()">Load More Products</button>
+    </div>
+
+    <footer class="footermain">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Techea. All rights reserved. | Showcasing technology for informational purposes only</p>
+        </div>
+    </footer>
+
+    <script src="work.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>

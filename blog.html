@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Articles - Techea</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img class="icon" src="logo.png" alt="logo" width="60px" height="46px" />
+                <p id="webname">Techea</p>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="globalSearchInput" placeholder="Search products..." onkeyup="handleGlobalSearch(event)">
+                <button class="search-btn" onclick="performGlobalSearch()"></button>
+                <div class="search-dropdown" id="searchDropdown"></div>
+            </div>
+            <div class="navlinks">
+                <div class="navlink"><a href="index.html">Home</a></div>
+                <div class="navlink"><a href="products.html">Catalog</a></div>
+                <div class="navlink"><a href="feedbackpage.html">Feedback</a></div>
+                <div class="navlink"><a href="aboutus.html">About</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <div class="blog-hero">
+        <h1>Tech <span class="gradient-text">Blog</span></h1>
+        <p>Insights, guides, and news from the world of technology</p>
+    </div>
+
+    <!-- Featured Article -->
+    <div class="featured-article">
+        <div class="featured-badge">🔥 Featured Article</div>
+        <div class="featured-content">
+            <div class="featured-text">
+                <h2>Ultimate Guide to Buying a Laptop in 2024</h2>
+                <p>Everything you need to know before buying your next laptop - from processors to battery life, we've got you covered.</p>
+                <div class="article-meta">
+                    <span>📅 March 15, 2024</span>
+                    <span>⏱️ 8 min read</span>
+                    <span>👁️ 2.5k views</span>
+                </div>
+                <button class="read-more" onclick="openArticle(1)">Read Article →</button>
+            </div>
+            <div class="featured-image">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="Laptop Guide">
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="blog-filters">
+        <button class="blog-filter-btn active" onclick="filterBlog('all')">All Articles</button>
+        <button class="blog-filter-btn" onclick="filterBlog('buying-guide')">🛒 Buying Guides</button>
+        <button class="blog-filter-btn" onclick="filterBlog('tech-news')">📰 Tech News</button>
+        <button class="blog-filter-btn" onclick="filterBlog('tips-tricks')">💡 Tips & Tricks</button>
+        <button class="blog-filter-btn" onclick="filterBlog('reviews')">⭐ Reviews</button>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid" id="blogGrid"></div>
+
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+        <h3>📧 Stay Updated</h3>
+        <p>Get the latest tech articles delivered to your inbox</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email" id="newsletterEmail">
+            <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+    </div>
+
+    <footer class="footermain">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Techea. All rights reserved. | Showcasing technology for informational purposes only</p>
+        </div>
+    </footer>
+
+    <script src="work.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>

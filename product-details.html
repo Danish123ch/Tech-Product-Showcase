@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Techea</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img class="icon" src="logo.png" alt="logo" width="60px" height="46px" />
+                <p id="webname">Techea</p>
+            </div>
+            <!-- Global Search Bar -->
+            <div class="nav-search">
+                <input type="text" id="globalSearchInput" placeholder="Search products..."
+                    onkeyup="handleGlobalSearch(event)">
+                <button class="search-btn" onclick="performGlobalSearch()"></button>
+                <div class="search-dropdown" id="searchDropdown"></div>
+            </div>
+            <div class="navlinks">
+                <div class="navlink">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navlink">
+                    <a href="feedbackpage.html">Feedback</a>
+                </div>
+                <div class="navlink">
+                    <a href="products.html">Catalog</a>
+                </div>
+                <div class="navlink">
+                    <a href="blog.html">Blogs </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="product-details-page">
+
+        <!-- Photo Gallery Grid -->
+        <div class="gallery-container">
+            <div class="main-image">
+                <img id="mainImage" src="" alt="Main product image">
+            </div>
+            <div class="thumbnail-grid" id="thumbnailGrid"></div>
+        </div>
+
+        <!-- Product Details Below Gallery -->
+        <div class="product-info-section">
+            <span class="category-badge" id="productCategory"></span>
+            <h1 class="product-title" id="productTitle"></h1>
+            <div class="product-price" id="productPrice"></div>
+
+            <div class="detail-card">
+                <h3>📝 Description</h3>
+                <p id="productDescription"></p>
+            </div>
+
+            <div class="detail-card">
+                <h3>⚙️ Technical Specifications</h3>
+                <ul class="specs-list" id="specsList"></ul>
+            </div>
+
+            <div class="detail-card">
+                <h3>✨ Key Features</h3>
+                <ul class="specs-list" id="featuresList"></ul>
+            </div>
+
+            <div class="detail-card">
+                <h3>🔧 Warranty & Support</h3>
+                <p id="productWarranty"></p>
+            </div>
+
+            <div class="detail-card">
+                <h3>🎨 Available Colors</h3>
+                <p id="productColors"></p>
+            </div>
+
+
+        </div>
+
+        <button onclick="goBackToHome()" class="back-home-btn">← Back to products</button>
+    </div>
+    <footer class="footermain">
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Techea. All rights reserved. | Showcasing technology for informational purposes only</p>
+        </div>
+    </footer>
+
+
+
+</body>
+<script src="product-details.js"></script>
+
+</html>

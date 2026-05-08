@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - Techea</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img class="icon" src="logo.png" alt="logo" width="60px" height="46px" />
+                <p id="webname">Techea</p>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="globalSearchInput" placeholder="Search products..." onkeyup="handleGlobalSearch(event)">
+                <button class="search-btn" onclick="performGlobalSearch()"></button>
+                <div class="search-dropdown" id="searchDropdown"></div>
+            </div>
+            <div class="navlinks">
+                <div class="navlink"><a href="index.html">Home</a></div>
+                <div class="navlink"><a href="products.html">Catalog</a></div>
+                <div class="navlink"><a href="blog.html">Blog</a></div>
+                <div class="navlink"><a href="aboutus.html">About</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content Container -->
+    <div class="article-container" id="articleContainer">
+        <div class="article-loading">
+            <div class="loading-spinner"></div>
+            <p>Loading article...</p>
+        </div>
+    </div>
+
+    <!-- Related Products Section -->
+    <div class="related-products" id="relatedProducts" style="display: none;">
+        <h2>Related <span class="gradient-text">Products</span></h2>
+        <div class="related-products-grid" id="relatedProductsGrid"></div>
+    </div>
+
+    <!-- Back to Blog Button -->
+    <div class="back-to-blog">
+        <button onclick="goBackToBlog()" class="back-blog-btn">← Back to Blog</button>
+    </div>
+
+    <footer class="footermain">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Techea. All rights reserved. | Showcasing technology for informational purposes only</p>
+        </div>
+    </footer>
+
+    <script src="work.js"></script>
+    <script src="article.js"></script>
+</body>
+</html>

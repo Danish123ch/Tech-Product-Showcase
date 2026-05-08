@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Techea</title>
+    <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img class="icon" src="logo.png" alt="logo" width="60px" height="46px" />
+                <p id="webname">Techea</p>
+            </div>
+            <div class="navlinks">
+                <div class="navlink">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navlink">
+                    <a href="products.html">Catalog</a>
+                </div>
+                <div class="navlink">
+                    <a href="aboutus.html">About Us</a>
+                </div>
+                <div class="navlink">
+                    <a href="blog.html">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="feedback-container" style="margin-top: 80px; margin-bottom: 100px;">
+        <div class="feedback-header">
+            <h2>We Value Your Feedback</h2>
+            <p>Help us improve your experience at Techea</p>
+        </div>
+
+        <form id="feedbackForm" onsubmit="submitFeedback(event)">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+                <label for="rating">How would you rate Techea? *</label>
+                <div class="rating-stars">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+                <input type="hidden" id="rating" name="rating" required>
+                <div class="rating-text" id="ratingText"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="product">Which product did you checked?</label>
+                <select id="product" name="product">
+                    <option value="">Select a product</option>
+                    <option value="MacBook Pro">MacBook Pro M3</option>
+                    <option value="Dell XPS">Dell XPS 15</option>
+                    <option value="HP Spectre">HP Spectre</option>
+                    <option value="AirPods Pro">AirPods Pro</option>
+                    <option value="Sony Headphones">Sony WH-1000XM5</option>
+                    <option value="JBL Speaker">JBL Speaker</option>
+                    <option value="Canon Camera">Canon EOS R5</option>
+                    <option value="Sony Camera">Sony A7III</option>
+                    <option value="Nikon Camera">Nikon Z6</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Describe your experience *</label>
+                <textarea id="experience" name="experience" rows="5" required
+                    placeholder="Tell us about your experience with Techea..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="suggestions">Suggestions for improvement</label>
+                <textarea id="suggestions" name="suggestions" rows="3"
+                    placeholder="How can we serve you better?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Subscribe to our newsletter for updates and offers
+                </label>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+                <button type="reset" class="reset-btn">Clear Form</button>
+            </div>
+        </form>
+
+        <div id="feedbackSuccess" class="success-message" style="display: none;">
+            <h3>Thank You! 🎉</h3>
+            <p>Your feedback has been submitted successfully. We appreciate your time and will use your input to
+                improve Techea!</p>
+        </div>
+    </div>
+    <footer class="footermain">
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Techea. All rights reserved. | Showcasing technology for informational purposes only</p>
+        </div>
+    </footer>
+</body>
+<script src="work.js"></script>
+<script src="feedback.js"></script>
+
+</html>
